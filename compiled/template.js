@@ -96,7 +96,7 @@ module.exports = function () {
           }],
 
           "class": "VuePagination__count" },
-        [this.count]
+        [this.count, " abc"]
       )]
     );
   };
