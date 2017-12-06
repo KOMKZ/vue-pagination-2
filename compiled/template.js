@@ -8,10 +8,10 @@ module.exports = function () {
     this.pages.map(function (page) {
       items.push(h(
         "li",
-        { "class": "VuePagination__pagination-item page-item " + this.activeClass(page) },
+        { "class": "VuePagination__pagination-item page-item" },
         [h(
           "a",
-          { "class": "page-link pagination-link", attrs: { role: "button"
+          { "class": "page-link pagination-link " + this.activeClass(page), attrs: { role: "button"
             },
             on: {
               "click": this.setPage.bind(this, page)
