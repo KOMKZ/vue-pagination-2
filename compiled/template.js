@@ -11,7 +11,7 @@ module.exports = function () {
         { "class": "VuePagination__pagination-item page-item " + this.activeClass(page) },
         [h(
           "a",
-          { "class": "page-link pagination-link", attrs: { role: "button"
+          { "class": "page-link", attrs: { role: "button"
             },
             on: {
               "click": this.setPage.bind(this, page)
@@ -24,8 +24,7 @@ module.exports = function () {
 
     return h(
       "div",
-      { "class": "VuePagination pagination", attrs: { role: "navigation", "aria-label": "pagination" }
-      },
+      { "class": "pagination VuePagination" },
       [h(
         "ul",
         {
@@ -66,7 +65,7 @@ module.exports = function () {
           { "class": "VuePagination__pagination-item page-item VuePagination__pagination-item-next-page " + this.allowedPageClass(this.page + 1) },
           [h(
             "a",
-            { "class": "page-link pagination-next", attrs: { href: "javascript:void(0);"
+            { "class": "page-link pagination-link", attrs: { href: "javascript:void(0);"
               },
               on: {
                 "click": this.next.bind(this)
